@@ -12,13 +12,12 @@ export class Date5Pipe implements PipeTransform {
     var difference = endTime.getTime() - startTime.getTime();
     var resultInMinutes = Math.round(difference / 60000);
 
-
     if (resultInMinutes > 1440) {
       if (startTime.getMonth() == endTime.getMonth()) {
         return "Conectado este mes"
       }
     }
-    return "Conectado recientemente."
+    return "Se ha conectado recientemente."
   }
 
 

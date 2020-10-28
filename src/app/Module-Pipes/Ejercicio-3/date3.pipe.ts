@@ -15,8 +15,7 @@ export class Date3Pipe implements PipeTransform {
     if(resultInMinutes > 360 && resultInMinutes < 720) {
       return "Conectado hace menos de 12 horas."
     }
-
-    return "Conectado recientemente."
+    return "Se ha conectado recientemente."
   }
 
 }

@@ -5,33 +5,22 @@ import {Pipe, PipeTransform} from '@angular/core';
   name: 'myPipe'
 })
 export class MyPipePipe implements PipeTransform {
-
   transform(value: any, args?: any): any {
-
-    var isDone: boolean = true
-    let respuesta = " ";
-    let copy = value;
-
-
+    var ready: boolean = true
+    let answer = " ";
     for (let i = 0; i < value.length; i++) {
-      var num = value.length;
-      console.log(copy);
-
       if (value[i] == " ") {
-        respuesta += " ";
-        continue;
+        answer += " ";
       } else {
-        if (isDone) {
-          respuesta += value[i].toUpperCase();
-          isDone = false;
+        if (ready) {
+          answer += value[i].toUpperCase();
+          ready = false;
         } else {
-          respuesta += value[i].toLowerCase();
-          isDone = true;
+          answer += value[i].toLowerCase();
+          ready = true;
         }
       }
-      console.log(value[i]);
-      console.log(respuesta);
     }
-    return respuesta;
+    return answer;
   }
 }

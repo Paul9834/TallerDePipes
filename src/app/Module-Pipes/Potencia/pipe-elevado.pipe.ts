@@ -4,9 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'pipeElevado'
 })
 export class PipeElevadoPipe implements PipeTransform {
-
   transform(value: number, args?: any): any {
     return value*value;
   }
-
 }
