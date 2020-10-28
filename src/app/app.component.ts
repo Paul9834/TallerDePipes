@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MyPipePipe } from './pipes/Letras/my-pipe.pipe';
+import { MyPipePipe } from './Module-Pipes/Letras/my-pipe.pipe';
 
 @Component({
   selector: 'app-root',
